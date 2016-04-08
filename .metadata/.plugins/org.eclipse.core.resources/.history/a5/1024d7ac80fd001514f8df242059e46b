@@ -1,0 +1,19 @@
+package controlBola;
+
+import java.awt.GridLayout;
+
+import javax.swing.JPanel;
+
+public class PanelBotones extends JPanel {
+	
+	private JButton btnUp;
+	private JButton btnDown;
+	private JButton btnLeft;
+	private JButton btnRight;
+	public PanelBotones() {
+		
+		setLayout(new GridLayout(1, 1));
+		
+	}
+
+}
