@@ -1,0 +1,51 @@
+package controlBola;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class PanelBotones extends JPanel {
+	
+	private JButton btnUp;
+	private JButton btnDown;
+	private JButton btnLeft;
+	private JButton btnRight;
+	private static final int BUTTON_LOCATION_X = 300;  // location x 
+	private static final int BUTTON_LOCATION_Y = 50;   // location y 
+	private static final int BUTTON_SIZE_X = 140;      // size height
+	private static final int BUTTON_SIZE_Y = 50;       // size width
+	public PanelBotones() {
+		setLayout(null);
+		btnUp = new JButton("Up");
+		btnDown = new JButton("Down");
+		btnLeft = new JButton("Left");
+		
+		btnRight = new JButton("Right");
+		
+		add(getbtnUp());
+		add(getbtnDown());
+		add(getbtnLeft());
+		add(getbtnRight());
+		getbtnUp().setLocation(0,0);
+		
+	}
+	
+	public JButton getbtnUp() {
+		return btnUp;
+	}
+	
+	public JButton getbtnDown() {
+		return btnDown;
+	}
+	
+	public JButton getbtnLeft() {
+		return btnLeft;
+	}
+
+	public JButton getbtnRight() {
+		return btnRight;
+	}
+}

@@ -1,0 +1,21 @@
+package controlBola;
+
+import java.awt.Dimension;
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+
+public class VentanaBola extends JFrame {
+	private PanelBola bola;
+	private PanelBotones botones;
+	public VentanaBola() {
+		setLayout(new FlowLayout(5, 5));
+		bola = new PanelBola();
+		botones = new PanelBotones();
+		botones.setPreferredSize(new Dimension(80, 150));
+		add(bola);
+		add(botones);
+
+	}
+
+}
