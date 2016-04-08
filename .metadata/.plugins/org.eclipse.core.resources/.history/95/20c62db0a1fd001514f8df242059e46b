@@ -1,0 +1,16 @@
+package controlBola;
+
+public class Bola {
+
+	private int diffXInicio;
+	private int diffYInicio;
+	
+	private static int velocidad;
+	
+	public Bola(int vel) {
+		diffXInicio = 0;
+		diffYInicio = 0;
+		velocidad = vel;
+	}
+
+}

@@ -1,6 +1,7 @@
 package controlBola;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 
@@ -24,7 +25,7 @@ public class PanelBola extends JPanel {
 	
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		//cara
+		//bola
 		g.setColor(Color.RED);
 		g.fillOval(POS_INICIO_X + getDiffXInicio(), POS_INICIO_Y + getDiffYInicio(), RADIO, RADIO);
 	}
@@ -39,17 +40,23 @@ public class PanelBola extends JPanel {
 	
 	//valor 0 para left 1 para right
 	public void setDiffXInicio(int val) {
-		diffXInicio += val * getVelocidad();
+		int aux = diffXInicio + val * getVelocidad();
+		if(POS_INICIO_X-aux != 0 && POS_INICIO_X+aux != 0){
+			diffXInicio = aux;
+			repaint();
+		}
 	}
 	
 	//valor 0 para up, 1 para down
 	public void setDiffYInicio(int val) {
-		diffYInicio += val * getVelocidad();
+		int aux = diffYInicio + val * getVelocidad();
+		if(POS_INICIO_Y-aux != 0 && POS_INICIO_Y+aux != 0){
+			diffYInicio = aux;
+			repaint();
+		}
 	}
 	
 	public static int getVelocidad() {
 		return velocidad;
 	}
-	
-	
 }

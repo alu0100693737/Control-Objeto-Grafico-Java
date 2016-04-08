@@ -1,0 +1,14 @@
+package controlBola;
+
+public class ControllerBola {
+	private VentanaBola bola;
+	
+	public ControllerBola(int velocidad) {
+		bola = new VentanaBola(velocidad)
+		
+		
+		
+		
+	}
+
+}

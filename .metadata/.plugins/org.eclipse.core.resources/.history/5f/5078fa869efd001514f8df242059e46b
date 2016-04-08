@@ -1,0 +1,15 @@
+package controlBola;
+
+import java.awt.event.ActionListener;
+
+public class ControllerBola {
+	private VentanaBola bola;
+	
+	public ControllerBola(int velocidad) {
+		bola = new VentanaBola(velocidad);
+	}
+
+	public static class MoverUp implements ActionListener {
+		
+	}
+}

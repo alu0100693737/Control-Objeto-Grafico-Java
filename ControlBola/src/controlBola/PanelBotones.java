@@ -28,7 +28,6 @@ public class PanelBotones extends JPanel {
 	public PanelBotones() {
 		
 		setLayout(null);
-		setSize(new Dimension(100, 600));
 		btnUp = new JButton("Up");
 		btnDown = new JButton("Down");
 		btnLeft = new JButton("Left");
@@ -46,6 +45,11 @@ public class PanelBotones extends JPanel {
 		getAutor().setHorizontalAlignment(JTextField.CENTER);
 		getAutor().setBounds(BUTTON_LOCATION_X-BUTTON_LOCATION_Y, ESPACIO_VERTICAL + ESPACIO_VERTICAL + ESPACIO_VERTICAL,
 				150 + ESPACIO_HORIZONTAL, ESPACIO_VERTICAL);
+		
+		getbtnUp().addActionListener(new ControllerBola.MoverUp());
+		getbtnDown().addActionListener(new ControllerBola.MoverDown());
+		getbtnLeft().addActionListener(new ControllerBola.MoverLeft());
+		getbtnRight().addActionListener(new ControllerBola.MoverRight());
 		add(getbtnUp());
 		add(getbtnDown());
 		add(getbtnLeft());
