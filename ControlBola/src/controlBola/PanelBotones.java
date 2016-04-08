@@ -21,26 +21,27 @@ public class PanelBotones extends JPanel {
 	private static final int ESPACIO_HORIZONTAL = 60;
 	private static final int ESPACIO_VERTICAL = 40;
 	public PanelBotones() {
+		
 		setLayout(null);
 		setSize(new Dimension(100, 600));
 		btnUp = new JButton("Up");
 		btnDown = new JButton("Down");
 		btnLeft = new JButton("Left");
-		System.out.println(this.getWidth());
 		btnRight = new JButton("Right");
+		
 		getbtnUp().setBounds(BUTTON_LOCATION_X, 0
 				, BUTTON_SIZE_X, BUTTON_SIZE_Y );
 		getbtnLeft().setBounds(BUTTON_LOCATION_X - BUTTON_LOCATION_Y, ESPACIO_VERTICAL, 
 				BUTTON_SIZE_X, BUTTON_SIZE_Y );
 		getbtnRight().setBounds(BUTTON_LOCATION_X + ESPACIO_HORIZONTAL, ESPACIO_VERTICAL, 
 				BUTTON_SIZE_X, BUTTON_SIZE_Y );
-		getbtnDown().setBounds(BUTTON_LOCATION_X, ESPACIO_VERTICAL*2
+		getbtnDown().setBounds(BUTTON_LOCATION_X, ESPACIO_VERTICAL + ESPACIO_VERTICAL
 				, BUTTON_SIZE_X, BUTTON_SIZE_Y );
+		
 		add(getbtnUp());
 		add(getbtnDown());
 		add(getbtnLeft());
 		add(getbtnRight());
-		
 	}
 	
 	public JButton getbtnUp() {
