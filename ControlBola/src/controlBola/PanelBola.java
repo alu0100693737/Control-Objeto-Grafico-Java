@@ -44,8 +44,9 @@ public class PanelBola extends JPanel {
 	//valor 0 para left 1 para right
 	public void setDiffXInicio(int val) {
 		int aux = diffXInicio + val * getVelocidad();
-		if(POS_INICIO_X-aux != 0 && POS_INICIO_X+aux != 0){
+		if ((val == -1 && (POS_INICIO_X + aux) > 0) || (val == 1 && (POS_INICIO_X - aux) > 0)) {
 			diffXInicio = aux;
+			//System.out.println("X: " + POS_INICIO_X + " " + diffXInicio);
 			repaint();
 		}
 	}
@@ -53,8 +54,9 @@ public class PanelBola extends JPanel {
 	//valor 0 para up, 1 para down
 	public void setDiffYInicio(int val) {
 		int aux = diffYInicio + val * getVelocidad();
-		if(POS_INICIO_Y-aux != 0 && POS_INICIO_Y+aux != 0){
+		if ((val == -1 && (POS_INICIO_Y + aux) > 0) || (val == 1 && (POS_INICIO_Y - aux) > 0)) {
 			diffYInicio = aux;
+			//System.out.println("Y: " + POS_INICIO_Y + " " + diffYInicio);
 			repaint();
 		}
 	}
