@@ -1,9 +1,0 @@
-package controlBola;
-
-public class PanelBotones extends JPanel {
-	
-	public PanelBotones() {
-		
-	}
-
-}
