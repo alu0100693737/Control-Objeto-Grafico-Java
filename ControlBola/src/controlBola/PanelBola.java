@@ -21,11 +21,14 @@ public class PanelBola extends JPanel {
 		diffXInicio = 0;
 		diffYInicio = 0;
 		velocidad = vel;
+		
+		setPreferredSize(new Dimension(600, 400));
 	}
 	
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		//bola
+		setPreferredSize(new Dimension(getWidth(), getHeight()-200));
 		g.setColor(Color.RED);
 		g.fillOval(POS_INICIO_X + getDiffXInicio(), POS_INICIO_Y + getDiffYInicio(), RADIO, RADIO);
 	}

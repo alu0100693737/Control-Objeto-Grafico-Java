@@ -1,0 +1,64 @@
+package controlBola;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.GridLayout;
+
+import javax.swing.JPanel;
+
+public class PanelBola extends JPanel {
+	
+	private final int RADIO = 50;
+	private int posInicioX = 250;
+	private final int POS_INICIO_Y = 175;
+	private int diffXInicio;
+	private int diffYInicio;
+	private static int velocidad;
+	
+	public PanelBola(int vel) {
+		setBackground(Color.CYAN);
+		setPreferredSize(new Dimension(600, 400));
+		diffXInicio = 0;
+		diffYInicio = 0;
+		velocidad = vel;
+		System.out.println(this.getWidth() + " " + this.getHeight());
+	}
+	
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		//bola
+		g.setColor(Color.RED);
+		g.fillOval(posInicioX + getDiffXInicio(), POS_INICIO_Y + getDiffYInicio(), RADIO, RADIO);
+	}
+	
+	public int getDiffXInicio() {
+		return diffXInicio;
+	}
+	
+	public int getDiffYInicio() {
+		return diffYInicio;
+	}
+	
+	//valor 0 para left 1 para right
+	public void setDiffXInicio(int val) {
+		int aux = diffXInicio + val * getVelocidad();
+		if(posInicioX-aux != 0 && posInicioX+aux != 0){
+			diffXInicio = aux;
+			repaint();
+		}
+	}
+	
+	//valor 0 para up, 1 para down
+	public void setDiffYInicio(int val) {
+		int aux = diffYInicio + val * getVelocidad();
+		if(POS_INICIO_Y-aux != 0 && POS_INICIO_Y+aux != 0){
+			diffYInicio = aux;
+			repaint();
+		}
+	}
+	
+	public static int getVelocidad() {
+		return velocidad;
+	}
+}
