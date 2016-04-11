@@ -1,0 +1,32 @@
+package controlBola;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+
+public class VistaControlBola extends JFrame {
+	private PanelBola bola;
+	private PanelBotones botones;
+
+	public VistaControlBola(int velocidad) {
+		setLayout(new BorderLayout(5, 5));
+		bola = new PanelBola(velocidad);
+		botones = new PanelBotones();
+		add(getpnlBola(), BorderLayout.CENTER);
+		add(getpnlBotones(), BorderLayout.SOUTH);
+	}
+
+	public PanelBola getpnlBola() {
+		return bola;
+	}
+
+	public PanelBotones getpnlBotones() {
+		return botones;
+	}
+
+
+
+}

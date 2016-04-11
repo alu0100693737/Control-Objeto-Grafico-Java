@@ -4,7 +4,7 @@
  * 
  * @author Ivan Garcia Campos   
  * @email alu0100693737@ull.edu.es
- * @version 1.0, 28/02/2016
+ * @version 1.0, 11/04/2016
  * @see asignatura "Programacion de aplicaciones interactivas"
  */
 package controlBola;
