@@ -1,0 +1,18 @@
+package test.java;
+
+import controlBola.ControllerBola;
+
+public class pruebaAssertj {
+	public static void main(String[] args) {
+		ControllerBola prueba = new ControllerBola(Integer.parseInt(args[0]));
+		
+		//Pruebas con Clase Controller
+		ControllerBolaAssert prueba1 = new ControllerBolaAssert(prueba);
+		prueba1.hasVentanaBola(prueba.getVentanaBola());
+		prueba1.assertThat(prueba);
+		
+		//Pruebas Clase
+		
+	}
+
+}

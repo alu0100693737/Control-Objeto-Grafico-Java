@@ -2,6 +2,8 @@
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="com.mountainminds.eclemma.core.SCOPE_IDS">
 <listEntry value="=ControlBola/src"/>
+<listEntry value="=ControlBola/C:\/Users\/ivan\/Documents\/25marzojava\/Control-Objeto-Grafico-Java\/ControlBola\/assertj-core-3.2.0.jar"/>
+<listEntry value="=ControlBola/C:\/Users\/ivan\/Documents\/25marzojava\/Control-Objeto-Grafico-Java\/ControlBola\/assertj-swing-3.2.0.jar"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/ControlBola/src/controlBola/Principal.java"/>

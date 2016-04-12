@@ -15,11 +15,11 @@
 <fullyQualifiedTypeName name="java.awt.GridLayout"/>
 <fullyQualifiedTypeName name="javax.swing.RepaintManager"/>
 <fullyQualifiedTypeName name="org.assertj.core.api.AbstractAssert"/>
-<fullyQualifiedTypeName name="controlBola.ControllerBola"/>
-<fullyQualifiedTypeName name="controlBola.PanelBola"/>
 <fullyQualifiedTypeName name="controlBola.PanelBotones"/>
 <fullyQualifiedTypeName name="controlBola.Principal"/>
-<fullyQualifiedTypeName name="controlBola.VistaControlBola"/>
 <fullyQualifiedTypeName name="java.awt.Dimension"/>
 <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+<fullyQualifiedTypeName name="controlBola.ControllerBola"/>
+<fullyQualifiedTypeName name="controlBola.VistaControlBola"/>
+<fullyQualifiedTypeName name="controlBola.PanelBola"/>
 </qualifiedTypeNameHistroy>

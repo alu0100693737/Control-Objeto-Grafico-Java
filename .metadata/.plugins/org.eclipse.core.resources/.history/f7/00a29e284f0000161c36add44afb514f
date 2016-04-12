@@ -1,0 +1,10 @@
+package test.java;
+
+import controlBola.ControllerBola;
+
+public class pruebaAssertj {
+	public static void main(String[] args) {
+		System.out.println(pepe);
+	}
+
+}

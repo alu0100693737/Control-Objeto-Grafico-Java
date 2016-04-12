@@ -19,8 +19,9 @@ public class PanelBola extends JPanel {
 	
 	private final int RADIO = 50;
 	
-	private final static int tamanoXporDefecto = 600;
-	private final static int tamanoYporDefecto = 400;
+	//cambiar a private, publico utilizado para assertj
+	public final static int TAMANO_X_POR_DEFECTO = 600;
+	public final static int TAMANO_Y_POR_DEFECTO = 400;
 	//puede ser reescalable
 	private int PosInicioX;
 	private int PosInicioY;
@@ -33,7 +34,7 @@ public class PanelBola extends JPanel {
 		diffXInicio = 0;
 		diffYInicio = 0;
 		velocidad = vel;
-		setPreferredSize(new Dimension(tamanoXporDefecto, tamanoYporDefecto));
+		setPreferredSize(new Dimension(TAMANO_X_POR_DEFECTO, TAMANO_Y_POR_DEFECTO));
 	}
 	
 	public void paintComponent(Graphics g) {
