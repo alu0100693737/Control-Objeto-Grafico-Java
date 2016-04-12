@@ -46,11 +46,19 @@ public class PanelBola extends JPanel {
 		
 		//Reescalable en Y Height
 		if (((PosInicioY + (diffYInicio - getVelocidad()) < 0))) {
-			//diffYInicio = 2;
+			diffYInicio = - getHeight()/2;
 			g.fillOval(PosInicioX + getDiffXInicio(), 0, RADIO, RADIO);
 		} else if (((PosInicioX + (diffXInicio - getVelocidad()) < 0))) {
+			diffXInicio = -getWidth()/2;
 			g.fillOval(0, PosInicioY + getDiffYInicio(), RADIO, RADIO);
-		}else {
+		} else if (((PosInicioY + (diffYInicio) >(int)getSize().getHeight() - RADIO))) {
+			g.fillOval(PosInicioX + getDiffXInicio(), (int)getSize().getHeight()/2, RADIO, RADIO);
+			diffYInicio = 0;
+		} else if (((PosInicioX + (diffXInicio) >(int)getSize().getWidth() - RADIO))) {
+			g.fillOval(getWidth()/2, PosInicioY + getDiffYInicio(), RADIO, RADIO);
+			diffXInicio = 0;
+		}
+		else {
 			g.fillOval(PosInicioX + getDiffXInicio(), PosInicioY + getDiffYInicio(), RADIO, RADIO);
 		}		
 	}
@@ -63,28 +71,52 @@ public class PanelBola extends JPanel {
 		return diffYInicio;
 	}
 	
+	public void setDiffXInicio(int valor) {
+		diffXInicio = valor;
+	}
+	
+	public void setDiffYInicio(int valor) {
+		diffYInicio = valor;
+	}
+	
+	public int getPosInicioX() {
+		return PosInicioX;
+	}
+	
+	public int getPosInicioY() {
+		return PosInicioY;
+	}
+	
+	public void setPosInicioX(int valor) {
+		PosInicioX = valor;
+	}
+	
+	public void setPosInicioY(int valor) {
+		PosInicioY = valor;
+	}
+	
 	//valor -1 para left 1 para right
-	public void setDiffXInicio(int val) {
+	public void actualizarDiffXInicio(int val) {
 		//posibilidad reescalado
-				PosInicioX = (int) getSize().getWidth()/2;
+				setPosInicioX((int) getSize().getWidth()/2);
 				System.out.println("Tamaño ventana anchura" + getSize().getWidth());
-				int aux = diffXInicio + val * getVelocidad();
-				if ((val == -1 && (PosInicioX + aux) > 0) || (val == 1 && (PosInicioX - aux) > RADIO)) {
-					diffXInicio = aux;
+				int aux = getDiffXInicio() + val * getVelocidad();
+				if ((val == -1 && (getPosInicioX() + aux) > 0) || (val == 1 && (getPosInicioX() - aux) > RADIO)) {
+					setDiffXInicio(aux);
 					System.out.println("X: " + PosInicioX + " " + diffXInicio);
 					repaint();
 				}
 	}
 	
 	//valor -1 para up, 1 para down
-	public void setDiffYInicio(int val) {
+	public void actualizarDiffYInicio(int val) {
 		//posibilidad reescalado
 		PosInicioY = (int) getSize().getHeight()/2;
 		System.out.println("Tamaño ventana altura" + getSize().getHeight());
 		int aux = diffYInicio + val * getVelocidad();
-		if ((val == -1 && (PosInicioY + aux) >= 0) || (val == 1 && (PosInicioY - aux) > RADIO)) {
+		if ((val == -1 && (getPosInicioY() + aux) >= 0) || (val == 1 && (PosInicioY - aux) > RADIO)) {
 			diffYInicio = aux;
-			System.out.println("Y: " + PosInicioY + " " + diffYInicio);
+			System.out.println("Y: " + getPosInicioY() + " " + diffYInicio);
 			repaint();
 		}
 	}

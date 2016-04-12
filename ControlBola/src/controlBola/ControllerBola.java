@@ -12,6 +12,8 @@ package controlBola;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 
 public class ControllerBola {
 	private static VistaControlBola bola;
@@ -27,29 +29,25 @@ public class ControllerBola {
 	//-1 para Up y Left
 	public static class MoverUp implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			getVentanaBola().getpnlBola().setDiffYInicio(-1);
-			getVentanaBola().getpnlBola().repaint();
+			getVentanaBola().getpnlBola().actualizarDiffYInicio(-1);
 		}
 	}
 
 	public static class MoverDown implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			getVentanaBola().getpnlBola().setDiffYInicio(1);
-			getVentanaBola().getpnlBola().repaint();
+			getVentanaBola().getpnlBola().actualizarDiffYInicio(1);
 		}
 	}
 
 	public static class MoverLeft implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			getVentanaBola().getpnlBola().setDiffXInicio(-1);
-			getVentanaBola().getpnlBola().repaint();
+			getVentanaBola().getpnlBola().actualizarDiffXInicio(-1);
 		}
 	}
 
 	public static class MoverRight implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			getVentanaBola().getpnlBola().setDiffXInicio(1);
-			getVentanaBola().getpnlBola().repaint();
+			getVentanaBola().getpnlBola().actualizarDiffXInicio(1);
 		}
 	}
 }

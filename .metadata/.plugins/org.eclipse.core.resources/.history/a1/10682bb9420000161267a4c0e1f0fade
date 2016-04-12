@@ -1,0 +1,83 @@
+/** Ivan Garcia Campos   alu0100693737@ull.edu.es
+ * 11/04/16
+ * Programacion de aplicaciones interactivas
+ * 1.0v
+ * Control de una Bola en pantalla mediante botones.
+ * Clase para el control de eventos sobre 4 botones
+ * 
+ * Uso de Excepciones propias y JFrame
+ */
+
+package controlBola;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
+
+public class ControllerBola {
+	private static VistaControlBola bola;
+
+	public ControllerBola(int velocidad) {
+		bola = new VistaControlBola(velocidad);
+	}
+
+	public static VistaControlBola getVentanaBola() {
+		return bola;
+	}
+
+	//-1 para Up y Left
+	public static class MoverUp implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			getVentanaBola().getpnlBola().actualizarDiffYInicio(-1);
+		}
+	}
+	
+	public static class Resize implements ComponentListener {
+		public void actionPerformed(ActionEvent e) {
+			getVentanaBola().getpnlBola().actualizarDiffYInicio(-1);
+		}
+
+		@Override
+		public void componentHidden(ComponentEvent arg0) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void componentMoved(ComponentEvent arg0) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void componentResized(ComponentEvent arg0) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void componentShown(ComponentEvent arg0) {
+			// TODO Auto-generated method stub
+			
+		}
+	}
+
+	public static class MoverDown implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			getVentanaBola().getpnlBola().actualizarDiffYInicio(1);
+		}
+	}
+
+	public static class MoverLeft implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			getVentanaBola().getpnlBola().actualizarDiffXInicio(-1);
+		}
+	}
+
+	public static class MoverRight implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			getVentanaBola().getpnlBola().actualizarDiffXInicio(1);
+		}
+	}
+}

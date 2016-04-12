@@ -1,0 +1,10 @@
+package controlBola;
+
+public class prueba {
+	public prueba() {}
+	
+	public caca() {
+		assertThat("aaa").
+	}
+
+}

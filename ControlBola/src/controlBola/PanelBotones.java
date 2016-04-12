@@ -10,7 +10,11 @@
 
 package controlBola;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Graphics;
+
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -24,7 +28,7 @@ public class PanelBotones extends JPanel {
 	private JTextField txtAutor;
 
 	private final static int tamanoXporDefecto = 600;
-	private final static int tamanoYporDefecto = 200;
+	private final static int tamanoYporDefecto = 175;
 
 	private static final int ESPACIADO_EXTRA_AUTOR = 150;
 	private static final int BUTTON_LOCATION_X = 250;  // location x 
@@ -39,6 +43,7 @@ public class PanelBotones extends JPanel {
 		setLayout(null);
 		setSize(new Dimension(tamanoXporDefecto, tamanoYporDefecto));
 		setPreferredSize(new Dimension((int)getSize().getWidth(), (int)getSize().getHeight()));
+		System.out.println(getSize());
 		btnUp = new JButton("Up");
 		btnDown = new JButton("Down");
 		btnLeft = new JButton("Left");
@@ -47,7 +52,7 @@ public class PanelBotones extends JPanel {
 
 		//btnLocalizacionX = (int)(getSize().getWidth()/2 - BUTTON_SIZE_X/2);
 		System.out.println("Button " + BUTTON_LOCATION_X);
-		getbtnUp().setBounds(BUTTON_LOCATION_X, 0
+		getbtnUp().setBounds((int)getSize().getWidth()/2 - BUTTON_SIZE_X/2, 0
 				, BUTTON_SIZE_X, BUTTON_SIZE_Y );
 		getbtnLeft().setBounds(BUTTON_LOCATION_X - BUTTON_LOCATION_Y, ESPACIO_VERTICAL, 
 				BUTTON_SIZE_X, BUTTON_SIZE_Y );
@@ -68,6 +73,25 @@ public class PanelBotones extends JPanel {
 		add(getbtnLeft());
 		add(getbtnRight());
 		add(getAutor());
+	}
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		setPreferredSize(new Dimension((int)getSize().getWidth(), tamanoYporDefecto));
+		System.out.println(getSize());
+
+		//btnLocalizacionX = (int)(getSize().getWidth()/2 - BUTTON_SIZE_X/2);
+		System.out.println("Button " + BUTTON_LOCATION_X);
+		getbtnUp().setBounds((int)getSize().getWidth()/2 - BUTTON_SIZE_X/2, 0
+				, BUTTON_SIZE_X, BUTTON_SIZE_Y );
+		getbtnLeft().setBounds((int)getSize().getWidth()/2 - ESPACIO_HORIZONTAL - BUTTON_SIZE_X/2, ESPACIO_VERTICAL, 
+				BUTTON_SIZE_X, BUTTON_SIZE_Y );
+		getbtnRight().setBounds((int)getSize().getWidth()/2 + ESPACIO_HORIZONTAL -  BUTTON_SIZE_X/2, ESPACIO_VERTICAL, 
+				BUTTON_SIZE_X, BUTTON_SIZE_Y );
+		getbtnDown().setBounds((int)getSize().getWidth()/2 -  BUTTON_SIZE_X/2, ESPACIO_VERTICAL + ESPACIO_VERTICAL
+				, BUTTON_SIZE_X, BUTTON_SIZE_Y );
+		getAutor().setHorizontalAlignment(JTextField.CENTER);
+		getAutor().setBounds((int)getSize().getWidth()/2 - BUTTON_LOCATION_Y - BUTTON_SIZE_X/2, ESPACIO_VERTICAL + ESPACIO_VERTICAL + ESPACIO_VERTICAL,
+				ESPACIADO_EXTRA_AUTOR + ESPACIO_HORIZONTAL, ESPACIO_VERTICAL);
 	}
 
 	public JButton getbtnUp() {

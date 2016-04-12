@@ -1,0 +1,31 @@
+package controlBola;
+
+
+import org.junit.Test;
+
+public class PruebasAssertJ {
+
+	private PanelBola pruebaPanelBola;
+	
+	public PruebasAssertJ() {
+		PanelBola pruebaPanelBola = new PanelBola(5);
+		
+		
+	}
+	
+	// unique entry point to get access to all assertThat methods and utility methods (e.g. entry)
+
+	// in the following examples, fellowshipOfTheRing is a List of TolkienCharacter
+
+	// basic assertions
+	@Test
+	public void pruebas() {
+	assertThat(pruebaPanelBola.getDiffXInicio()).isEqualTo((int)pruebaPanelBola.getSize().getWidth()/2);
+	/*assertThat(frodo).isNotEqualTo(sauron)
+	                 .isIn(fellowshipOfTheRing);
+	}*/
+
+
+
+}
+}

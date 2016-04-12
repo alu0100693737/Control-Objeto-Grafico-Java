@@ -3,12 +3,9 @@
 <fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="controlBola.VentanaBola"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
-<fullyQualifiedTypeName name="controlBola.PanelBola"/>
-<fullyQualifiedTypeName name="controlBola.PanelBotones"/>
 <fullyQualifiedTypeName name="javax.swing.JPanel"/>
 <fullyQualifiedTypeName name="javax.swing.JButton"/>
 <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
-<fullyQualifiedTypeName name="java.awt.Dimension"/>
 <fullyQualifiedTypeName name="java.awt.TextField"/>
 <fullyQualifiedTypeName name="javax.swing.JTextArea"/>
 <fullyQualifiedTypeName name="javax.swing.JTextField"/>
@@ -17,5 +14,12 @@
 <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="java.awt.GridLayout"/>
 <fullyQualifiedTypeName name="javax.swing.RepaintManager"/>
+<fullyQualifiedTypeName name="org.assertj.core.api.AbstractAssert"/>
+<fullyQualifiedTypeName name="controlBola.ControllerBola"/>
+<fullyQualifiedTypeName name="controlBola.PanelBola"/>
+<fullyQualifiedTypeName name="controlBola.PanelBotones"/>
+<fullyQualifiedTypeName name="controlBola.Principal"/>
+<fullyQualifiedTypeName name="controlBola.VistaControlBola"/>
+<fullyQualifiedTypeName name="java.awt.Dimension"/>
 <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
 </qualifiedTypeNameHistroy>

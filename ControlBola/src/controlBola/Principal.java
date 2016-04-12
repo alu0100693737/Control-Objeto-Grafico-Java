@@ -9,7 +9,7 @@
  */
 
 package controlBola;
-
+//import test.java.controlBola.*;
 import javax.swing.JFrame;
 
 public class Principal {
